@@ -31,7 +31,7 @@ themeSwitcher.addEventListener('click', function() {
 // If no data exists, return an empty array.
 function readLocalStorage () {
   const blogEntry = JSON.parse(localStorage.getItem('blogposts'));
-  console.log("LocalStorage Blogposts:", blogEntry); // Log the data from localStorage
+  // console.log("LocalStorage Blogposts:", blogEntry); 
   if (blogEntry === null) {
       return [];
   }

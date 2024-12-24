@@ -1,7 +1,6 @@
 // TODO: Create a variable that selects the form element 
 // TODO: Add an event listener to the form on submit. Call the function to handle the form submission.
 
-
 // Step 1: Identify the blog fields I want to extract data from
 
 const blogForm = document.getElementById('blogForm');
@@ -10,7 +9,7 @@ const blogForm = document.getElementById('blogForm');
 // Step 2: Add an event listener and create an object to store blog posts
 blogForm.addEventListener('submit', function(submit) {
     submit.preventDefault();
-    console.log("form submitted");
+    // console.log("form submitted");
 
     // Step 3: Loop through all the fields for form field validation
 const inputFields = document.querySelectorAll('input, textarea');
@@ -30,7 +29,7 @@ if (allFieldsFilled) {
         title: document.getElementById('title').value,
         content: document.getElementById('content').value,
     }
-    console.log(newBlogEntry);
+    // console.log(newBlogEntry);
     storeLocalStorage(newBlogEntry)
     redirectPage('blog.html');
     }

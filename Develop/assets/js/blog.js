@@ -13,20 +13,20 @@ function displayBlogPosts(blogposts) {
         const title = document.createElement('h2');
         title.textContent = post.title;
         article.appendChild(title);
-        console.log(title);
+        // console.log(title);
 
         const blockquote = document.createElement('blockquote');
         const content = document.createElement('blockquote'); // Create content paragraph
         content.textContent = post.content;
         blockquote.appendChild(content);
         article.appendChild(blockquote); 
-        console.log(content);
+        // console.log(content);
 
         const username = document.createElement('p'); // Create username element
         username.textContent = `Posted by: ${post.username}`;
         article.appendChild(username);
         article.appendChild(username);
-        console.log(username);
+        // console.log(username);
 
         // Append the article to the container
         container.appendChild(article);
@@ -43,7 +43,7 @@ const noPost = () => {
 const renderBlogList = () => {
     // Get posts from localStorage
     const blogposts = readLocalStorage();
-    console.log("Retrieved Blog Posts:", blogposts); // Add a log to see if we are getting anything from localStorage
+    // console.log("Retrieved Blog Posts:", blogposts); 
 
 
     if (blogposts.length === 0) {
@@ -54,7 +54,7 @@ const renderBlogList = () => {
 }
 
 // Call renderBlogList function when page loads
-document.addEventListener('DOMContentLoaded', function() { // Fixed parentheses here
+document.addEventListener('DOMContentLoaded', function() { 
     renderBlogList();
 });
 
